@@ -231,6 +231,13 @@ input {
     margin:0;
 }
 
+.text{
+  color:#000099;
+}
+
+.text2{
+  color:#000099;
+}
 /*---------------------------Mobile Layout----------------------------*/
 .container1 { /*for index.html*/
   display: grid;
