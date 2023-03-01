@@ -32,13 +32,13 @@
       <p>Use this form to allow us to get in touch with you within 1 business day!<br>* = Required Field</p>
       <form class="nestedgrid2" action="https://formspree.io/f/mzbqgzbe"
   method="POST">
-       <div>Name*<br><input type="text" size="30" placeholder="Jane Doe" autofocus required name="fullname"><br>
-       Email*<br><input type="email" size="30" required name="email"><br>
-       Phone*<br><input type="tel" size="30" placeholder="(xxx) xxx-xxxx" required name="phone"><br>
-       Personal Website<br><input type="url" size="30" name="website"><br>
+       <div class="text">Name*<br><input type="text" size="30" placeholder="Jane Doe" autofocus required name="fullname" aria-label="Name"><br>
+       Email*<br><input type="email" size="30" required name="email" aria-label="Email"><br>
+       Phone*<br><input type="tel" size="30" placeholder="(xxx) xxx-xxxx" required name="phone" aria-label="Phone"><br>
+       Personal Website<br><input type="url" size="30" name="website" aria-label="Website"><br>
        </div>
-       <div>
-       Current High School<br><input type="text" size="30" list="school"><br>
+       <div class="text2">
+       Current High School<br><input type="text" size="30" list="school" aria-label="School"><br>
        <datalist id="school">
        <option value="Beaverbrook">
        <option value="Birchwood">
@@ -47,8 +47,8 @@
        <option value="Hainesville">
        <option value="other">
        </datalist>
-       Expected date of entry<br><input type="date" size="30" name="date"><br>
-       Number of days/week desired<br><input type="tel" size="10" name="days"><br>
+       Expected date of entry<br><input type="date" size="30" name="date" aria-label="Date"><br>
+       Number of days/week desired<br><input type="tel" size="10" name="days" aria-label="Days"><br>
        <input type="submit" value="Help Me Boost My Scores" class="button">
        </div>
       </form>
