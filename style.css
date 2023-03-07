@@ -27,12 +27,15 @@ header h1 {
      font-family:Impact;
      text-shadow: 2px 2px 5px #3217ff;
      margin: 0;
+     animation: words 4s;
 }
 
 header h3 {
     font-size:3vw;
     color:#ffffff;
     margin:0;
+    animation: words 4.5s;
+
 }
 nav {
     grid-area:nav;
@@ -136,6 +139,7 @@ article p {
   grid-area:headerpic;
   padding:5px;
   height:10vmax;
+  animation: logo 4s;
 }
 
 .headertext{
@@ -168,7 +172,13 @@ figure img{
   margin-top:16px;
   max-width:20em;
   border:2px solid #0000b0;
+  transition: all .5s ease-in-out;
 }
+
+figure img:hover {
+  transform: scale(1.1);
+}
+
 
 .fig2 {
   grid-area:fig2;
@@ -238,12 +248,62 @@ input {
 .text2{
   color:#000099;
 }
+
+@keyframes logo {
+   0% {
+      opacity: 0;
+      transform:  translatey(-1em);
+   }
+   100% {
+      opacity: 1;
+      transform: translatey(0);
+   }
+}
+
+@keyframes words {
+   0% {
+      opacity: 0;
+      transform: translateX(1em);
+   }
+    50% {
+      opacity: .5;
+      transform: translateY(.1em);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes FadeAndScale{
+  0%{
+    opacity:0;
+    transform: scale3d(.75,.75,1);
+  }
+  70%{
+    opacity:0;
+    transform: scale3d(.75,.75,1);
+  }
+  100%{
+    opacity:1;
+    transform: scale3d(1,1,1);
+  }
+}
+  
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation: none !important;
+      transition: none !important;
+      }
+}
+
 /*---------------------------Mobile Layout----------------------------*/
 .container1 { /*for index.html*/
   display: grid;
   grid-template-columns:1fr;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header"
     "nav nav"
@@ -256,6 +316,7 @@ input {
   grid-template-columns:100%;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header"
     "nav"
@@ -269,6 +330,7 @@ input {
   grid-template-columns:100%;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header"
     "nav"
@@ -284,6 +346,7 @@ display:grid;
 grid-template-columns:100%;
 margin:1%;
 grid-gap:.5em;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "header"
 "nav"
@@ -295,6 +358,7 @@ grid-template-areas:
 .nestedgrid{
 display:grid;
 grid-template-columns:100%;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "section"
 "fig1";
@@ -331,6 +395,7 @@ grid-template-areas:
 @media only screen and (min-width: 480px)  {
 .container1 { /*for index.html*/
   grid-template-columns: auto 1fr;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header"
     "main main"
@@ -342,6 +407,7 @@ grid-template-areas:
   grid-template-columns:auto 1fr;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header"
     "nav aside"
@@ -354,6 +420,7 @@ grid-template-areas:
   grid-template-columns:auto 1fr;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header"
     "nav main"
@@ -368,6 +435,7 @@ display:grid;
 grid-template-columns:auto 1fr;
 margin:1%;
 grid-gap:.5em;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "header header"
 "nav main"
@@ -378,6 +446,7 @@ grid-template-areas:
 .nestedgrid{
 display:grid;
 grid-template-columns:100%;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "section"
 "fig1";
@@ -406,6 +475,7 @@ grid-template-areas:
 
 .container1 { /*for index.html*/
   grid-template-columns:auto 1fr;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header"
     "nav main"
@@ -417,6 +487,7 @@ grid-template-areas:
   grid-template-columns:auto 1fr 25%;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header header"
     "nav main aside"
@@ -428,6 +499,7 @@ grid-template-areas:
   grid-template-columns:auto 1fr 1.5fr;
   grid-gap:.5em;
   margin:1%;
+  animation:FadeAndScale 1s;
   grid-template-areas:
     "header header header"
     "nav main top"
@@ -441,6 +513,7 @@ display:grid;
 grid-template-columns:auto 1fr;
 margin:1%;
 grid-gap:.5em;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "header header"
 "nav main"
@@ -451,6 +524,7 @@ grid-template-areas:
 .nestedgrid{
 display:grid;
 grid-template-columns:1.5fr 1fr;
+animation:FadeAndScale 1s;
 grid-template-areas:
 "section fig1";
   }
@@ -458,6 +532,7 @@ grid-template-areas:
 .nestedgrid2{
 display:grid;
 grid-template-columns:1fr 1fr;
+animation:FadeAndScale 1s;
 grid-template-areas:
 ".div1 .div2";
   }
